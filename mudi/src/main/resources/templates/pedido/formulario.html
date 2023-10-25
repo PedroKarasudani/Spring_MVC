@@ -17,17 +17,17 @@
 			<form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="POST">
 				<div class="form-group">
 					<label for="nomeProduto">Produto</label>
-					<input th:field="*{"nomeProduto"}" class="form-control" placeholder="nome do produto"/>
+					<input th:field="*{nomeProduto}" class="form-control" placeholder="nome do produto"/>
 					<small>Informar qual o nome do produto.</small>
 				</div>
 				<div class="form-group">
 					<label for="urlProduto">Url</label>
-					<input th:field="*{"urlProduto"}" class="form-control" placeholder="url do produto"/>
+					<input th:field="*{urlProduto}" class="form-control" placeholder="url do produto"/>
 					<small>Procure em um site o produto que voce deseja e cole a url da pagina aqui.</small>
 				</div>
 				<div class="form-group">
 					<label for="urlImagem">Imagem</label>
-					<input th:field="*{"urlImagem"}" class="form-control" placeholder="url da imagem"/>
+					<input th:field="*{urlImagem}" class="form-control" placeholder="url da imagem"/>
 					<small>Copei a url de uma boa imagem do produtoi e cole aqui para ajudar compradores.</small>
 				</div>
 				<div class="form-group">
