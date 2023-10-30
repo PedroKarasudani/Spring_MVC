@@ -27,7 +27,6 @@ INDEX VERSION 1.134+C:\Users\pedro\eclipse-workspace\MVCmudi\.metadata\.plugins\
 1245931440.index
 2728318380.index
 3132406418.index
-2504533997.index
 1217547724.index
 2324271506.index
 3605457426.index
