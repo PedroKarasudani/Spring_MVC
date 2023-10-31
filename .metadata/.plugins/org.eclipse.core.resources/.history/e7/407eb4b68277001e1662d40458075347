@@ -4,9 +4,14 @@
 <head th:replace="~{base :: head}"></head>
 
 <body>
-	<div th:replace="~{base :: logo}"></div>
+	<div class="logo-container mb-3 p-3 d-flex justify-content-between">
+		<span class="logo">mudi</span>
+		<span class="mt-3">login</span>
+	</div>
 	<div class="container">
-		<div th:replace="~{base :: titulo('Novo Pedido')}"></div>
+		<div class="jumbotron mb-0">
+			<h1 class="display-4">Novo Pedido</h1>
+		</div>
 		<div class="card mt-3">
 			<form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="POST">
 				<div class="form-group">
