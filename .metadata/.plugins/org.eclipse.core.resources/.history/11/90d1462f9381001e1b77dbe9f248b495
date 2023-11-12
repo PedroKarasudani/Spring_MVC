@@ -26,7 +26,7 @@
 			<form id="form-login" th:action="@{/logout}" method="post"></form>	
 		</span>
 	</div>
-	<div class="row" sec:authorize="isAuthenticated()">
+	<div class="row mb-2 sec:authorize="isAuthenticated()"">
 		<div class="col">
 			<nav class="nav">
 			  <a class="nav-link" th:href="@{/home}">Home</a>
@@ -36,6 +36,6 @@
 	</div>
 </div>
 
-<div th:fragment="titulo(valor)" class="jumbotron mb-2 mt-2">
+<div th:fragment="titulo(valor)" class="jumbotron mb-2">
 	<h1 class="display-4" th:text="${valor}"></h1>
 </div>
