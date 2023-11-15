@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head th:replace="~{base :: head}"></head>
+
+<body onLoad="onLoad()">
+	<div th:replace="~{base :: logo}"></div>
+	<div class="container" id="ofertas">
+		<div th:replace="~{base :: titulo('Últimos Pedidos')}"></div>
+		<div class="card mb-3" v-for="pedido in pedidos">
+			<div class="card-header alert-dark">{{pedido.nomeProduto}}</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-12 col-sm-8 mb-3">
+						<div class="row">
+							<div class="col-md-5">Valor: <input/></div>
+							<div class="col-md-7">Data da entrega: <input/></div>
+						</div>
+						<div>Produto</div>
+						<div><input class="form-control" th:value="${pedido.urlProduto}" value="url do produto" /></div>
+
+						<div>Descrição</div>
+						<div>
+							<textarea class="form-control" th:text="${pedido.descricao}">descrição do pedido</textarea>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div>
+							<img class="img-thumbnail" th:src="${pedido.urlImagem}" src="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function onLoad() {
+			var app = new Vue({
+				el: '#ofertas',
+				data: {
+					pedidos: [{"nomeProduto": "Echo Dot 5", "valorNegociado": 300.00, "dataDaEntrega": "2024-08-11", "urlProduto": "https://www.amazon.com.br/Echo-Dot-5%C2%AA-gera%C3%A7%C3%A3o-Cor-Preta/dp/B09B8VGCR8/", "urlImagem": "https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg", "descricao": "", "status": "AGUARDANDO", "user": {"username": "pedro", "password": "$2a$10$9ktDKMaNrjKqgohJ/WR0rOeO0uaij0iXHvEzC/loXqhFx4/jvav.q", "enabled": true}}, {"nomeProduto": "Apple iPhone 14", "valorNegociado": 500.00, "dataDaEntrega": "2024-09-20", "urlProduto": "https://www.amazon.com.br/Apple-iPhone-15-256-GB/dp/B0CHXRDKQF", "urlImagem": "https://m.media-amazon.com/images/I/41RpmPYWXLL._AC_SX679_.jpg", "descricao": null, "status": "AGUARDANDO", "user": {"username": "maria", "password": "$2a$10$VrO5PZFILrKYNElzK0HWSee9Uhlotc.QWnlx1LL9EyB59cfm02tB6", "enabled": true}}]
+				}
+			});
+		}
+	</script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</body>
+
+</html>

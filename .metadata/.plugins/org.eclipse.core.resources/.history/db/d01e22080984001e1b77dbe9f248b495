@@ -6,7 +6,7 @@
 <body onLoad="onLoad()">
 	<div th:replace="~{base :: logo}"></div>
 	<div class="container" id="ofertas">
-		<div th:replace="~{base :: titulo('Faça sua Oferta!')}"></div>
+		<div th:replace="~{base :: titulo('Últimos Pedidos')}"></div>
 		<div class="card mb-3" v-for="pedido in pedidos">
 			<div class="card-header alert-dark">{{pedido.nomeProduto}}</div>
 			<div class="card-body">
@@ -17,7 +17,7 @@
 							<div class="col-md-7">Data da entrega: <input/></div>
 						</div>
 						<div>Produto</div>
-						<div><a v-bind:href="pedido.urlProduto">{{pedido.nomeProduto}}</a></div>
+						<div><a v-bind:href="pedido.urlProduto">{{pedido.urlProduto}}</a></div>
 
 						<div>Descrição</div>
 						<div>
