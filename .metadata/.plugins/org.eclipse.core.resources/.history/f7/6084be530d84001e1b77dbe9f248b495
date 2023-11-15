@@ -41,13 +41,12 @@
 					pedidos: []
 				},
 				mounted () {
-					axios.get('http://localhost:8080/api/pedidos/aguardando').then(response => (this.pedidos = response.data))
+					console.log('mounted')
 				}
 			});
 		}
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 </body>
 
 </html>
